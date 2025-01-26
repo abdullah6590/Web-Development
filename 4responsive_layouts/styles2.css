@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px; 
+  }
+  
+  /* Header */
+  .header {
+    background-color: #4a90e2; 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect for cards */
+  }
+  
+  /* Main Layout */
+  .main-layout {
+    display: flex;
+    gap: 20px; 
+  }
+  /* Main Section */
+  .main {
+    flex: 3;
+    background-color: #8bc34a; 
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 20px; 
+  }
+  
+  .item {
+    background-color: #38a33c; 
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect for cards */
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the cards */
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Adjust last row to have fewer items */
+  .grid > .item:nth-last-child(-n+3) {
+    grid-column: span 1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 1;
+    background-color: #e57373; /* Red */
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    min-height: 550px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sidebar shadow */
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #4a90e2; /* Blue */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect for cards */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+  
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    }
+  
+    .sidebar {
+        min-height: auto;
+    }
+  }
+  
+  
+  
